@@ -1,0 +1,27 @@
+#!/bin/bash
+# Auto install Banner SSH / Dropbear
+
+# Lokasi banner
+BANNER="/etc/banner.com"
+
+# Buat isi banner
+cat > $BANNER << 'EOF'
+<p style="text-align:center">
+<font color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font> <br>
+<font color='#00FF00'>▁▂▄▅▆▇ PT RAJA VPN PREMIUM ▇▆▅▄▂▁</font> <br>
+<font color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font> <br>
+<font color='#fc0303'> - NO FRAUD !!</font> <br>
+<font color='#fc7303'> - NO HACKING !!!</font> <br>
+<font color='#a9fc03'> - NO CARDING !!!</font> <br>
+<font color='#52fc03'> - NO TORRENT !!!</font> <br>
+<font color='#0367fc'> - NO CRIMINAL CYBER !!!</font> <br>
+<font color='#fc0303'> - MAX LOGIN 1 & 2 & 5 DEVICE !!!</font> <br>
+<font color='#0367fc'> - AUTO DELETE MULTILOGIN !!!</font> <br> <font
+color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font> <br>
+<font color='green'>THANK YOU FOR YOUR ORDER</font> <br> 
+<font color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</span><span 
+EOF
+
+systemctl restart ssh || systemctl restart sshd
+
+echo "✅ Banner berhasil dipasang!"
