@@ -23,7 +23,7 @@ color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</fo
 EOF
 
 systemctl restart ssh
-#systemctl restart sshd
+# systemctl restart sshd
 systemctl restart dropbear
 
 echo "✅ Banner berhasil dipasang!"
