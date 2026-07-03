@@ -8,7 +8,7 @@ BANNER="/etc/banner.com"
 cat > $BANNER << 'EOF'
 <p style="text-align:center">
 <font color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font> <br>
-<font color='#00FF00'>▁▂▄▅▆▇ PT RAJA VPN PREMIUM ▇▆▅▄▂▁</font> <br>
+<font color='#00FF00'>▁▂▄▅▆▇ PT RAJA SERVER PREMIUM ▇▆▅▄▂▁</font> <br>
 <font color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font> <br>
 <font color='#fc0303'> - NO FRAUD !!</font> <br>
 <font color='#fc7303'> - NO HACKING !!!</font> <br>
