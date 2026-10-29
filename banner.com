@@ -27,6 +27,7 @@ cat > "$BANNER" << 'EOF'
 <font color="#FFD700">✘ NO CARDING / ILLEGAL ACTIVITY</font><br>
 <font color="#00D9FF">✘ NO TORRENT / ABUSE</font><br>
 <font color="#FF55FF">✘ NO CRIMINAL CYBER ACTIVITY</font><br>
+<font color="#FF4444">✘ NO RT/RW NET</font><br>
 <font color="#FFFFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
 <font color="#00FF7F"><b>✓ MAX LOGIN: 1 / 2 / 5 DEVICES</b></font><br>
 <font color="#FF4444">⚡ MULTI-LOGIN: AUTO DELETE</font><br>
