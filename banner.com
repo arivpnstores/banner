@@ -1,29 +1,59 @@
+```bash
 #!/bin/bash
-# Auto install Banner SSH / Dropbear
+# ==========================================
+#  PT RAJA SERVER PREMIUM
+#  SSH / DROPBEAR BANNER INSTALLER
+# ==========================================
 
-# Lokasi banner
 BANNER="/etc/banner.com"
 
-# Buat isi banner
-cat > $BANNER << 'EOF'
+# Pastikan dijalankan sebagai root
+if [[ $EUID -ne 0 ]]; then
+    echo "Jalankan script sebagai root!"
+    exit 1
+fi
+
+# Buat banner premium
+cat > "$BANNER" << 'EOF'
 <p style="text-align:center">
-<font color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font> <br>
-<font color='#00FF00'>▁▂▄▅▆▇ PT RAJA SERVER PREMIUM ▇▆▅▄▂▁</font> <br>
-<font color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font> <br>
-<font color='#fc0303'> - NO FRAUD !!</font> <br>
-<font color='#fc7303'> - NO HACKING !!!</font> <br>
-<font color='#a9fc03'> - NO CARDING !!!</font> <br>
-<font color='#52fc03'> - NO TORRENT !!!</font> <br>
-<font color='#0367fc'> - NO CRIMINAL CYBER !!!</font> <br>
-<font color='#fc0303'> - MAX LOGIN 1 & 2 & 5 DEVICE !!!</font> <br>
-<font color='#0367fc'> - AUTO DELETE MULTILOGIN !!!</font> <br> <font
-color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font> <br>
-<font color='green'>THANK YOU FOR YOUR ORDER</font> <br> 
-<font color="blue">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</span><span 
+<font color="#00BFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
+<font color="#00FF7F"><b>☁ PT RAJA SERVER PREMIUM ☁</b></font><br>
+<font color="#00BFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
+<font color="#FFD700">✦ PREMIUM SSH TUNNEL SERVICE ✦</font><br>
+<br>
+<font color="#FF4444"><b>⚠ SERVER RULES & POLICY ⚠</b></font><br>
+<font color="#FFFFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
+<font color="#FF5555">✘ NO FRAUD / SCAM</font><br>
+<font color="#FF8C42">✘ NO HACKING / ATTACKS</font><br>
+<font color="#FFD700">✘ NO CARDING / ILLEGAL ACTIVITY</font><br>
+<font color="#00D9FF">✘ NO TORRENT / ABUSE</font><br>
+<font color="#FF55FF">✘ NO CRIMINAL CYBER ACTIVITY</font><br>
+<font color="#FFFFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
+<font color="#00FF7F"><b>✓ MAX LOGIN: 1 / 2 / 5 DEVICES</b></font><br>
+<font color="#FF4444">⚡ MULTI-LOGIN: AUTO DELETE</font><br>
+<font color="#FFFFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
+<br>
+<font color="#00BFFF">SECURE • STABLE • PREMIUM</font><br>
+<font color="#FFD700"><b>THANK YOU FOR YOUR ORDER!</b></font><br>
+<font color="#00FF7F">ENJOY YOUR CONNECTION</font><br>
+<font color="#00BFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
+<font color="#FFFFFF">© PT RAJA SERVER PREMIUM</font><br>
+</p>
 EOF
 
-systemctl restart ssh
-# systemctl restart sshd
-systemctl restart dropbear
+# Atur permission banner
+chmod 644 "$BANNER"
 
-echo "✅ Banner berhasil dipasang!"
+# Restart service jika tersedia
+for SERVICE in ssh sshd dropbear; do
+    if systemctl cat "$SERVICE" >/dev/null 2>&1; then
+        systemctl restart "$SERVICE" 2>/dev/null || true
+    fi
+done
+
+echo "=========================================="
+echo "  BANNER SSH / DROPBEAR BERHASIL DIPASANG"
+echo "  PT RAJA SERVER PREMIUM"
+echo "=========================================="
+echo "Lokasi: $BANNER"
+```
