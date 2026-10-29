@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 # ==========================================
 #  PT RAJA SERVER PREMIUM
@@ -56,4 +55,3 @@ echo "  BANNER SSH / DROPBEAR BERHASIL DIPASANG"
 echo "  PT RAJA SERVER PREMIUM"
 echo "=========================================="
 echo "Lokasi: $BANNER"
-```
