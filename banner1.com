@@ -18,7 +18,6 @@ cat > "$BANNER" << 'EOF'
 <font color="#FFFFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
 <font color="#FFD700"><b>THANK YOU FOR YOUR ORDER!</b></font><br>
 <font color="#00BFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
-
 </p>
 EOF
 
