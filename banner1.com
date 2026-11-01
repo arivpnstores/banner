@@ -15,9 +15,9 @@ fi
 # Buat banner premium
 cat > "$BANNER" << 'EOF'
 <p style="text-align:center">
+<font color="#00E5FF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
+<font color="#FFD700"><b>✦ THANK YOU FOR YOUR ORDER! ✦</b></font><br>
 <font color="#FFFFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
-<font color="#FFD700"><b>THANK YOU FOR YOUR ORDER!</b></font><br>
-<font color="#00BFFF">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</font><br>
 </p>
 EOF
 
